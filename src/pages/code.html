@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "tertiary": "#0a200f", "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "tertiary-container": "#1f3623", "surface": "#fbf9f4", "on-primary": "#ffffff", "on-error-container": "#93000a", "on-secondary-container": "#752d09", "surface-container-lowest": "#ffffff", "tertiary-fixed": "#ceeace", "on-surface": "#1b1c19", "on-background": "#1b1c19", "inverse-surface": "#30312e", "outline": "#74777e", "on-tertiary-fixed-variant": "#354c38", "primary-fixed-dim": "#afc9ea", "surface-container": "#f0eee9", "secondary-fixed": "#ffdbcd", "secondary-fixed-dim": "#ffb598", "inverse-primary": "#afc9ea", "secondary": "#974722", "surface-container-highest": "#e4e2dd", "on-primary-fixed": "#001d36", "on-tertiary-container": "#859f86", "on-secondary-fixed-variant": "#79300c", "on-surface-variant": "#43474d", "surface-tint": "#47607e", "error-container": "#ffdad6", "on-error": "#ffffff", "primary-container": "#17324d", "surface-container-high": "#eae8e3", "on-primary-container": "#819aba", "surface-bright": "#fbf9f4", "surface-variant": "#e4e2dd", "surface-dim": "#dbdad5", "background": "#fbf9f4", "on-secondary-fixed": "#360f00", "surface-container-low": "#f5f3ee", "error": "#ba1a1a", "outline-variant": "#c3c6ce", "secondary-container": "#fc966b", "inverse-on-surface": "#f2f1ec", "primary": "#001d36", "on-primary-fixed-variant": "#2f4865", "on-tertiary-fixed": "#09200f", "tertiary-fixed-dim": "#b2ceb2", "primary-fixed": "#d1e4ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "space-md": "1rem", "gutter-sm": "1rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "margin-lg": "5rem", "margin-md": "2.5rem", "margin": "1.5rem", "gutter-lg": "2rem", "gutter": "1.5rem" }, fontFamily: { "headline-lg": ["Playfair Display"], "body-md": ["Plus Jakarta Sans"], "display-mobile": ["Playfair Display"], "headline-md": ["Playfair Display"], "label-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Playfair Display"], "label-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-sm": ["Playfair Display"], "display": ["Playfair Display"], "subheading": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"] }, fontSize: { "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "display-mobile": ["38px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "0em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "28px", "fontWeight": "500" }], "display": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "subheading": ["18px", { "lineHeight": "26px", "fontWeight": "500" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#fbf9f4;color:#1b1c19;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="TroopTribe Tours Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X5hn4EWmm0GNnNTy9tLXo0Yl-Bs_CgS1vsX1-l1zgWcsqg9UFtrsNWOlMYQGEainMo3lnDhHuOUfA3FcitbknEIUEyLQ2eOf9IYkg96JDXqGr6HjE3SNa8Rskcv61UeatjsGGMsx6WUZzKQUR4Z6NTOCoMHoaCjAdundit_eiujMimObjFZf1ge6L68sudTbiOrhhUlNDV9xplfFxyFQtUHDS93uMpeiMao9TGS1cnvg"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-medium">TroopTribe</span></div><div class="flex items-center gap-space-xs"><a aria-label="Direct Call" class="w-11 h-11 flex items-center justify-center rounded-full text-primary hover:bg-surface-container transition-colors" href="tel:+233200000000"><span class="material-symbols-outlined text-[22px]">call</span></a><a aria-label="WhatsApp Support" class="w-11 h-11 flex items-center justify-center rounded-full text-tertiary-container hover:bg-surface-container transition-colors" href="https://wa.me/"><span class="material-symbols-outlined text-[22px]">chat</span></a><button aria-label="Menu" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-28 bg-surface"><div class="flex flex-col w-full">
+<!-- Hero Section -->
+<section class="relative px-gutter pt-space-md pb-space-lg flex flex-col">
+<div class="relative w-full rounded-2xl overflow-hidden shadow-lg bg-surface-container-high">
+<div class="bg-cover bg-center w-full h-[400px] relative flex flex-col justify-end p-space-md" data-alt="Editorial cinematic view of coastal Ghana with coconut palms, golden hour warm sunlight reflecting over historic shoreline and clear Atlantic waters, authentic warm terracotta and gold tones, peaceful luxury travel aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDDdrGCmCLsXAiTYAWm3N2NbToDdFlCpHTuCk_n4wGkONzTJST5kxznFD9pHZa3H2OsQ_8uwh7xa61mvrScPpNHOeOVN_rx-lbT0OQ-DHt_Fl215hgdqZu8AIpNXOTTljNQifM8fNiuse2dp5GZQAQtT_2ii0obheOhYoB2VM6jXjKA5jXpqgjPQalTftAQCPNcl2t5jsud2hAydcFmNQe08mCBWepR98rSg3ANKyz4')">
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent"></div>
+<div class="relative z-10 flex flex-col gap-space-xs text-on-primary">
+<div class="inline-flex items-center gap-1.5 self-start px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span>Locally planned. Personally experienced.</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-semibold tracking-tight text-on-primary mt-space-xs">
+            Discover Ghana.<br/>Your Way.
+          </h1>
+<p class="font-body-sm text-body-sm text-surface-container-low max-w-xs mt-0.5">
+            Personalised Ghana experiences crafted by local experts — from cultural heritage to coastal adventures.
+          </p>
+<div class="grid grid-cols-2 gap-space-xs mt-space-md">
+<a class="flex items-center justify-center gap-1 py-3 px-space-sm rounded-xl bg-secondary text-on-secondary font-label-md text-label-md shadow-sm active:scale-95 transition-transform text-center" href="#custom-planner">
+<span>Plan My Trip</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<a class="flex items-center justify-center gap-1 py-3 px-space-sm rounded-xl bg-surface-container-lowest/20 backdrop-blur-md text-on-primary font-label-md text-label-md active:scale-95 transition-transform text-center" href="#experiences">
+<span>Browse All</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Trust Bar -->
+<section class="w-full px-gutter py-space-xs">
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-1">
+<div class="flex items-center gap-2 px-space-md py-2.5 rounded-full bg-surface-container text-on-surface shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">groups</span>
+<span class="font-label-md text-label-md whitespace-nowrap">Solo to 60+ Travelers</span>
+</div>
+<div class="flex items-center gap-2 px-space-md py-2.5 rounded-full bg-surface-container text-on-surface shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">flight_land</span>
+<span class="font-label-md text-label-md whitespace-nowrap">Airport Pickups Included</span>
+</div>
+<div class="flex items-center gap-2 px-space-md py-2.5 rounded-full bg-surface-container text-on-surface shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">local_police</span>
+<span class="font-label-md text-label-md whitespace-nowrap">Accra Local Curators</span>
+</div>
+</div>
+</section>
+<!-- Experiences Section -->
+<section class="px-gutter pt-space-xl pb-space-lg flex flex-col gap-space-md" id="experiences">
+<div class="flex flex-col">
+<div class="inline-flex items-center gap-1.5 text-secondary font-label-sm text-label-sm uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-[15px]">stars</span>
+<span>Curated Journeys</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary">
+        What Would You Love to Experience?
+      </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+        Bespoke itineraries rooted in diaspora history, lush tropical sanctuaries, and rich living traditions.
+      </p>
+</div>
+<!-- Stack of High Impact Cards -->
+<div class="flex flex-col gap-space-md mt-space-xs">
+<!-- Card 1: Heritage & History -->
+<div class="flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md">
+<div class="relative w-full h-48 bg-surface-container">
+<div class="w-full h-full bg-cover bg-center" data-alt="Whitewashed historic walls of Cape Coast Castle overlooking deep blue Ghanaian ocean waves with sun rays reflecting, thoughtful cinematic cultural heritage view." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDEsm83WbUJfa85mb1QQIBRiporSqQRIesjNhcpTj-Pj7XBQ7orOmF06hYsgp3ITtIdTnx1Zl5y7Lbm2hqYW6hPSNUZOWmmnHJBmdFDxESYHmPg4D7UIMYTEfg8FRGbEZw4oRHwgXhka_U9r-E9GzvHJ8kuuGfU1KuH-GmYS8pWiNPyrGsG5eY6EripuKlF0JcHB3ZRYWTmNa7UhsLiQbgL_ERXYP-R9XqnWywLCEcS')"></div>
+<div class="absolute top-space-sm left-space-sm flex gap-1">
+<span class="px-2.5 py-1 rounded-full bg-surface/90 backdrop-blur-md text-primary font-label-sm text-label-sm shadow-sm">
+              3–5 Days
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm shadow-sm">
+              Heritage
+            </span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-primary">Heritage &amp; History</h3>
+<span class="text-secondary font-label-md text-label-md">From $420</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Cape Coast &amp; Elmina Castles, Kakum rainforest suspension walk, and the Ancestral River of Assin Manso.
+          </p>
+<div class="pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">history_edu</span>
+<span>Private Historian Guide</span>
+</div>
+<button class="flex items-center gap-1 text-secondary font-label-md text-label-md py-1 px-2.5 rounded-lg hover:bg-secondary-fixed/30 active:scale-95 transition-all" onclick="openDrawer('Heritage &amp; History Tour')">
+<span>Explore</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2: Nature & Adventure -->
+<div class="flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md">
+<div class="relative w-full h-48 bg-surface-container">
+<div class="w-full h-full bg-cover bg-center" data-alt="Lush green Wli waterfalls in Ghana with crystal clear fresh spray cascading into a jungle lagoon, soft natural morning ambient light, adventurous nature escape." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDxaYmyyPG8TAnbbllSdM4kF2nnK5s309FHe5L1PFpN-Wjvj81FY6OPe8yAdp7EZgNBX6K8-3AcV0St9-5ljyTyhoFBGS4cJeVHID4b12C37ww-TiWaquDIDKmtAVAxbS2qsAMHy1yJFt7DUDK_-uKoNe4IvrV9ZwxeOriDIM241d7e_58d1keq6D0JCz0WLCzUVHXjfRGRTIRNhMbdOVYSIkBIS_cXNhl0cwOiyvPz')"></div>
+<div class="absolute top-space-sm left-space-sm flex gap-1">
+<span class="px-2.5 py-1 rounded-full bg-surface/90 backdrop-blur-md text-primary font-label-sm text-label-sm shadow-sm">
+              2–4 Days
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm shadow-sm">
+              Adventure
+            </span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-primary">Nature &amp; Adventure</h3>
+<span class="text-secondary font-label-md text-label-md">From $350</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Hike to highest peaks at Mount Afadja, cool mist at Wli Waterfalls, canoe expeditions across serene Volta Lake.
+          </p>
+<div class="pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">hiking</span>
+<span>4x4 Escorted</span>
+</div>
+<button class="flex items-center gap-1 text-secondary font-label-md text-label-md py-1 px-2.5 rounded-lg hover:bg-secondary-fixed/30 active:scale-95 transition-all" onclick="openDrawer('Nature &amp; Adventure Expedition')">
+<span>Explore</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3: Food & Culture -->
+<div class="flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md">
+<div class="relative w-full h-48 bg-surface-container">
+<div class="w-full h-full bg-cover bg-center" data-alt="Vibrant Accra food tour table featuring authentic Ghanaian Jollof, Kelewele plantains, fresh hibiscus bissap drink, and colorful traditional Kente cloth accents, editorial overhead lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuALMWyK9H0tGDgzlv7UZk-1rawZ39E-pG4cjj9nI45sK2PSJWvMVBsOWuPDf-KDtBAgOD4iHz-jHDw07F_5vWCrj3wuAP8N7tGjtcao67Pv1COldAJVUpEzRcZiJ1sdX5EHf7JaSlaunGBatVsuwlXPruujJPa_Ho3B0qmOdGJgCLQo2nSS5woBMWB-gcxO4_ujW-o_3ZzocIyIydtf6mJn43_uecZzAocGFXipEO6u')"></div>
+<div class="absolute top-space-sm left-space-sm flex gap-1">
+<span class="px-2.5 py-1 rounded-full bg-surface/90 backdrop-blur-md text-primary font-label-sm text-label-sm shadow-sm">
+              Full Day
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm shadow-sm">
+              Culinary &amp; Art
+            </span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-primary">Food &amp; Contemporary Culture</h3>
+<span class="text-secondary font-label-md text-label-md">From $180</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Chef-led market foraging in Makola, secret street-food crawls in Osu, and private contemporary studio visits.
+          </p>
+<div class="pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">restaurant</span>
+<span>All Tastings Included</span>
+</div>
+<button class="flex items-center gap-1 text-secondary font-label-md text-label-md py-1 px-2.5 rounded-lg hover:bg-secondary-fixed/30 active:scale-95 transition-all" onclick="openDrawer('Food &amp; Culture Crawl')">
+<span>Explore</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 4: Bespoke Itineraries -->
+<div class="flex flex-col bg-surface-container-high rounded-2xl overflow-hidden shadow-md">
+<div class="relative w-full h-44 bg-primary-container p-space-md flex flex-col justify-end text-on-primary">
+<div class="absolute top-space-sm right-space-sm w-9 h-9 rounded-full bg-secondary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-on-secondary text-[20px]">auto_awesome</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider mb-1">Completely Tailored</span>
+<h3 class="font-headline-sm text-headline-sm text-on-primary font-semibold">Your Ghana, Your Way</h3>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs">
+<p class="font-body-sm text-body-sm text-on-surface">
+            Whether for December Year of Return festivals, family lineage tracking, or relaxing beach retreats in Busua.
+          </p>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tailored pace &amp; private van</span>
+<a class="flex items-center gap-1 text-secondary font-label-md text-label-md py-1 px-2.5 rounded-lg hover:bg-surface-container-highest active:scale-95 transition-all" href="#custom-planner">
+<span>Customize</span>
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why TroopTribe Mobile 3-item list -->
+<section class="px-gutter py-space-lg bg-surface-container-low flex flex-col gap-space-md">
+<div class="flex flex-col">
+<div class="inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-[15px]">workspace_premium</span>
+<span>The Local Difference</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary">
+        Why Travel With TroopTribe?
+      </h2>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Item 1 -->
+<div class="flex items-start gap-space-sm p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center shrink-0 text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]">person_pin_circle</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 mb-0.5">
+<h4 class="font-label-lg text-label-lg text-primary">Born &amp; Raised Guides</h4>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-medium">Verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Connect directly with insider community curators who know the safest routes, untold stories, and warmest welcomes.
+          </p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-start gap-space-sm p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center shrink-0 text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]">shield</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 mb-0.5">
+<h4 class="font-label-lg text-label-lg text-primary">Zero Hassle Logistics</h4>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-[10px] font-medium">All-Inclusive</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Airport meet-and-greets, air-conditioned private transfers, prepaid site passes, and vetted boutique lodgings.
+          </p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-start gap-space-sm p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center shrink-0 text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]">volunteer_activism</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 mb-0.5">
+<h4 class="font-label-lg text-label-lg text-primary">Direct Community Impact</h4>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-medium">Fair Trade</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Your travel dollars directly sustain artisan guilds, female craft cooperatives, and rainforest preservation rangers.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Simple 3-step Timeline -->
+<section class="px-gutter py-space-xl flex flex-col gap-space-md">
+<div class="flex flex-col">
+<span class="text-secondary font-label-sm text-label-sm uppercase tracking-wider mb-1">Effortless Journey</span>
+<h2 class="font-headline-md text-headline-md text-primary">
+        How It Works
+      </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+        From initial daydream to touchdown at Kotoka International Airport.
+      </p>
+</div>
+<!-- Timeline vertical tracker -->
+<div class="relative pl-6 flex flex-col gap-space-lg mt-space-xs">
+<!-- Vertical Connecting Line -->
+<div class="absolute left-2.5 top-3 bottom-4 w-0.5 bg-surface-container-highest"></div>
+<!-- Step 1 -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-5 h-5 rounded-full bg-secondary text-on-secondary flex items-center justify-center text-[10px] font-bold shadow-sm">
+          1
+        </div>
+<h4 class="font-label-lg text-label-lg text-primary font-semibold">Share Your Vision</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Tell us dates, group size (from 1 to 60+), and personal interests via WhatsApp or a brief enquiry form.
+        </p>
+</div>
+<!-- Step 2 -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-5 h-5 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center text-[10px] font-bold shadow-sm">
+          2
+        </div>
+<h4 class="font-label-lg text-label-lg text-primary font-semibold">Receive Custom Proposal</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          We refine a day-by-day itinerary with transparent costs, handpicked hotels, and cultural experiences in 24 hours.
+        </p>
+</div>
+<!-- Step 3 -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-5 h-5 rounded-full bg-secondary text-on-secondary flex items-center justify-center text-[10px] font-bold shadow-sm">
+          3
+        </div>
+<h4 class="font-label-lg text-label-lg text-primary font-semibold">Travel Stress-Free</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Step off the plane to a personal welcome sign, your dedicated driver, and 24/7 concierge on speed dial.
+        </p>
+</div>
+</div>
+</section>
+<!-- Interactive Quick Planner Anchor -->
+<section class="px-gutter py-space-lg bg-surface-container rounded-2xl mx-gutter flex flex-col gap-space-md shadow-inner" id="custom-planner">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-on-secondary">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Quick Plan Builder</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tap your preferences below</p>
+</div>
+</div>
+<!-- Quick Pill Selection -->
+<div class="flex flex-col gap-space-sm">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-semibold">Who is traveling?</label>
+<div class="grid grid-cols-3 gap-space-xs" id="traveler-selector">
+<button class="group-btn py-2 px-1 rounded-xl bg-surface-container-lowest text-primary text-center font-label-md text-label-md active:bg-primary active:text-on-primary shadow-sm transition-all focus:bg-primary focus:text-on-primary" type="button">
+          Solo Traveler
+        </button>
+<button class="group-btn py-2 px-1 rounded-xl bg-primary text-on-primary text-center font-label-md text-label-md shadow-sm transition-all" type="button">
+          Couple / 2
+        </button>
+<button class="group-btn py-2 px-1 rounded-xl bg-surface-container-lowest text-primary text-center font-label-md text-label-md active:bg-primary active:text-on-primary shadow-sm transition-all focus:bg-primary focus:text-on-primary" type="button">
+          Group (4+)
+        </button>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-semibold">Priority Focus</label>
+<div class="flex flex-wrap gap-space-xs" id="vibe-selector">
+<span class="vibe-tag cursor-pointer px-3 py-1.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm shadow-sm">
+          Ancestry &amp; Castles
+        </span>
+<span class="vibe-tag cursor-pointer px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm">
+          Beaches &amp; Surfing
+        </span>
+<span class="vibe-tag cursor-pointer px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm">
+          Art &amp; Nightlife
+        </span>
+<span class="vibe-tag cursor-pointer px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm">
+          Rainforest Hikes
+        </span>
+</div>
+</div>
+<a class="flex items-center justify-center gap-2 py-3 px-space-md rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-md active:scale-95 transition-all text-center mt-space-xs" href="https://wa.me/?text=Hello%20TroopTribe!%20I%20would%20like%20to%20plan%20a%20Ghana%20trip%20with%20custom%20preferences.">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Send Draft via WhatsApp</span>
+</a>
+</section>
+<!-- Compact Mobile FAQ Accordion -->
+<section class="px-gutter pt-space-xl pb-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col">
+<span class="text-secondary font-label-sm text-label-sm uppercase tracking-wider mb-1">Common Questions</span>
+<h2 class="font-headline-md text-headline-md text-primary">
+        Everything You Need to Know
+      </h2>
+</div>
+<div class="flex flex-col gap-space-xs" id="faq-container">
+<!-- FAQ 1 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all">
+<button class="w-full p-space-md flex items-center justify-between text-left gap-space-sm" onclick="toggleFaq(this)">
+<span class="font-label-lg text-label-lg text-primary font-semibold">How far in advance should we plan?</span>
+<span class="material-symbols-outlined text-secondary text-[20px] transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md pt-0">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            For travel during high season (especially December's festive "Year of Return" period), we recommend booking 3 to 6 months in advance. For other months, 3 to 4 weeks is plenty of time to customize everything smoothly.
+          </p>
+</div>
+</div>
+<!-- FAQ 2 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all">
+<button class="w-full p-space-md flex items-center justify-between text-left gap-space-sm" onclick="toggleFaq(this)">
+<span class="font-label-lg text-label-lg text-primary font-semibold">Can you accommodate solo travelers or large groups?</span>
+<span class="material-symbols-outlined text-secondary text-[20px] transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md pt-0">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Yes! We run private solo bespoke adventures with dedicated guide companions, as well as family reunions, university expeditions, and chartered luxury group convoys with up to 60+ attendees.
+          </p>
+</div>
+</div>
+<!-- FAQ 3 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all">
+<button class="w-full p-space-md flex items-center justify-between text-left gap-space-sm" onclick="toggleFaq(this)">
+<span class="font-label-lg text-label-lg text-primary font-semibold">Do you arrange airport pickups and hotels?</span>
+<span class="material-symbols-outlined text-secondary text-[20px] transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md pt-0">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Absolutely. Every itinerary includes airport greeting right at terminal arrival in Accra, private high-comfort transfers, and verified stays ranging from beachfront boutique villas to central luxury hotels.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Mobile Final CTA Banner -->
+<section class="px-gutter pt-space-md pb-space-xl">
+<div class="relative rounded-2xl bg-primary text-on-primary p-space-lg flex flex-col items-center text-center shadow-xl overflow-hidden">
+<!-- Decorative background accent glow -->
+<div class="absolute -right-12 -top-12 w-48 h-48 rounded-full bg-secondary/30 blur-2xl pointer-events-none"></div>
+<div class="absolute -left-12 -bottom-12 w-48 h-48 rounded-full bg-tertiary-container/40 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col items-center gap-space-xs">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[24px]">travel_explore</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-semibold text-on-primary">
+          Your Ghana Story Starts Here
+        </h3>
+<p class="font-body-sm text-body-sm text-primary-fixed-dim max-w-xs mt-1">
+          Chat directly with our Accra expedition team. No pressure, genuine insights, and free customized proposals.
+        </p>
+<div class="flex flex-col w-full gap-space-xs mt-space-md">
+<a class="w-full flex items-center justify-center gap-2 py-3.5 px-space-md rounded-xl bg-secondary text-on-secondary font-label-lg text-label-lg shadow-md active:scale-95 transition-all" href="https://wa.me/">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Start WhatsApp Chat</span>
+</a>
+<button class="w-full flex items-center justify-center gap-2 py-3 px-space-md rounded-xl bg-surface-container-lowest/15 backdrop-blur-md text-on-primary font-label-md text-label-md hover:bg-surface-container-lowest/25 active:scale-95 transition-all" onclick="openDrawer('General Custom Enquiry')">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+<span>Send Email Enquiry</span>
+</button>
+</div>
+<div class="flex items-center gap-4 mt-space-sm text-primary-fixed-dim text-label-sm font-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>Avg 15-min reply</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>Secure payments</span>
+</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Modal / Inquiry Drawer for quick exploration -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden flex-col justify-end transition-opacity" id="tourDrawer">
+<div class="w-full bg-surface rounded-t-3xl p-gutter flex flex-col gap-space-md shadow-2xl max-h-[751px] overflow-y-auto">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-secondary"></div>
+<h4 class="font-headline-sm text-headline-sm text-primary" id="drawerTitle">Custom Tour Request</h4>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface" onclick="closeDrawer()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Leave your details and a local Ghana curator will share a day-to-day plan within 24 hours.
+      </p>
+<form class="flex flex-col gap-space-sm" onsubmit="handleFormSubmit(event)">
+<div>
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Your Name</label>
+<input class="w-full mt-1 px-4 py-3 rounded-xl bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-sm focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" placeholder="e.g. Kwame or Sarah" required="" type="text"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Email or WhatsApp</label>
+<input class="w-full mt-1 px-4 py-3 rounded-xl bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-sm focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" placeholder="+1 (555) 000-0000 or email" required="" type="text"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Approximate Dates / Month</label>
+<input class="w-full mt-1 px-4 py-3 rounded-xl bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-sm focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" placeholder="e.g. Dec 2025 or Flexible" type="text"/>
+</div>
+<button class="mt-space-xs w-full py-3.5 rounded-xl bg-secondary text-on-secondary font-label-lg text-label-lg shadow-md active:scale-95 transition-transform flex items-center justify-center gap-2" type="submit">
+<span>Request Detailed Itinerary</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+<script>
+  function toggleFaq(button) {
+    const content = button.nextElementSibling;
+    const icon = button.querySelector('.material-symbols-outlined');
+    const isHidden = content.classList.contains('hidden');
+    
+    // Close other FAQs
+    document.querySelectorAll('.faq-content').forEach(item => {
+      item.classList.add('hidden');
+    });
+    document.querySelectorAll('#faq-container .material-symbols-outlined').forEach(i => {
+      i.style.transform = 'rotate(0deg)';
+    });
+
+    if (isHidden) {
+      content.classList.remove('hidden');
+      icon.style.transform = 'rotate(180deg)';
+    } else {
+      content.classList.add('hidden');
+      icon.style.transform = 'rotate(0deg)';
+    }
+  }
+
+  function openDrawer(title) {
+    const drawer = document.getElementById('tourDrawer');
+    const drawerTitle = document.getElementById('drawerTitle');
+    if (drawerTitle && title) {
+      drawerTitle.innerText = title;
+    }
+    drawer.classList.remove('hidden');
+    drawer.classList.add('flex');
+  }
+
+  function closeDrawer() {
+    const drawer = document.getElementById('tourDrawer');
+    drawer.classList.add('hidden');
+    drawer.classList.remove('flex');
+  }
+
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    alert('Akwaaba! Thank you for reaching out. A TroopTribe concierge has received your request and will reach out shortly.');
+    closeDrawer();
+  }
+
+  // Interactive selectors on quick builder
+  document.querySelectorAll('#traveler-selector .group-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('#traveler-selector .group-btn').forEach(b => {
+        b.className = 'group-btn py-2 px-1 rounded-xl bg-surface-container-lowest text-primary text-center font-label-md text-label-md shadow-sm transition-all';
+      });
+      this.className = 'group-btn py-2 px-1 rounded-xl bg-primary text-on-primary text-center font-label-md text-label-md shadow-sm transition-all';
+    });
+  });
+
+  document.querySelectorAll('#vibe-selector .vibe-tag').forEach(tag => {
+    tag.addEventListener('click', function() {
+      if (this.classList.contains('bg-secondary')) {
+        this.classList.remove('bg-secondary', 'text-on-secondary');
+        this.classList.add('bg-surface-container-lowest', 'text-on-surface');
+      } else {
+        this.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+        this.classList.add('bg-secondary', 'text-on-secondary');
+      }
+    });
+  });
+</script></main><aside class="fixed right-margin bottom-28 z-40 pb-safe pointer-events-none"><a aria-label="Instant WhatsApp Concierge" class="pointer-events-auto flex items-center justify-center w-14 h-14 rounded-full bg-tertiary-container text-on-tertiary shadow-[0_8px_20px_-2px_rgba(15,35,20,0.3)] hover:scale-105 active:scale-95 transition-transform" href="https://wa.me/"><span class="material-symbols-outlined text-[28px]">chat_bubble</span></a></aside><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_16px_rgba(23,50,77,0.06)]" data-active-classes="text-secondary font-semibold"><div class="flex items-center gap-space-sm px-gutter py-space-sm"><a class="flex items-center justify-center gap-space-xs h-12 px-space-md rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-sm hover:opacity-95 active:scale-95 transition-all shrink-0" data-path="concierge-chat" href="https://wa.me/"><span class="material-symbols-outlined text-[20px]">chat</span><span class="hidden xs:inline">WhatsApp</span></a><a class="flex-1 flex items-center justify-center gap-space-xs h-12 px-space-md rounded-xl bg-secondary text-on-secondary font-label-lg text-label-lg shadow-sm hover:opacity-95 active:scale-95 transition-all text-center" data-path="plan-trip" href="#"><span class="material-symbols-outlined text-[20px]">explore</span><span>Plan Trip</span></a></div></nav></body></html>
